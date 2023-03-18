@@ -1,1 +1,0 @@
-TWRP for BQ 5745L CLEVER
