@@ -6,7 +6,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_BQru-5745L.mk
+    $(LOCAL_DIR)/twrp_BQru_5745L.mk
 
-COMMON_LUNCH_CHOICES := twrp_BQru-5745L-eng
+COMMON_LUNCH_CHOICES := twrp_BQru_5745L-eng
 
