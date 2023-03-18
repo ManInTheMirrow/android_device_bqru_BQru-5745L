@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/bqru/BQru-5745L
+DEVICE_PATH := device/bqru/BQru_5745L
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
