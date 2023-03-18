@@ -1,3 +1,4 @@
+ro.hardware.keystore=sprdtrusty
 ro.crypto.volume.filenames_mode=aes-256-cts
 ro.crypto.uses_fs_ioc_add_encryption_key=true
 ro.crypto.metadata.enabled=true
