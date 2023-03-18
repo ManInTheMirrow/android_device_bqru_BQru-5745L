@@ -21,8 +21,8 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock.recovery
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := BQru-5745L
-PRODUCT_NAME := twrp_BQru-5745L
+PRODUCT_DEVICE := BQru_5745L
+PRODUCT_NAME := twrp_BQru_5745L
 PRODUCT_BRAND := BQru
 PRODUCT_MODEL := BQ-5745L
 PRODUCT_MANUFACTURER := BQru
