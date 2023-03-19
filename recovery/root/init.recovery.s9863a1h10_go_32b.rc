@@ -37,7 +37,7 @@ service gatekeeper-1-0 /system/lib64/android.hardware.gatekeeper@1.0-service
     disabled
     seclabel u:r:recovery:s0
 
-service keymaster-4-0 /system/lib64/android.hardware.keymaster@4.0-service
+service keymaster-4-0 /system/lib64/android.hardware.keymaster@4.0-unisoc.service
     user root
     group root
     disabled
