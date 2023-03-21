@@ -6,7 +6,7 @@
 #
 
 # Shipping API level
-PRODUCT_SHIPPING_API_LEVEL := 30
+PRODUCT_SHIPPING_API_LEVEL := 29
 
 # Dynamic
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -27,7 +27,7 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock.recovery
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := 5745L
+PRODUCT_DEVICE := BQru_5745L
 PRODUCT_NAME := twrp_BQru_5745L
 PRODUCT_BRAND := BQru
 PRODUCT_MODEL := BQ-5745L
@@ -37,6 +37,7 @@ PRODUCT_MANUFACTURER := BQru
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.build.security_patch=2099-12-31
 
-PRODUCT_SYSTEM_PROPERTY_BLACKLIST := \
-    ro.product.device \
-    ro.product.name
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRIVATE_BUILD_DESC="BQru-5745L user 10 QP1A.190711.020 48516 release-keys"
+
+BUILD_FINGERPRINT := BQru/BQru-5745L/BQru-5745L:10/QP1A.190711.020/48215:user/release-keys
