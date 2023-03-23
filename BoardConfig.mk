@@ -20,6 +20,9 @@ TARGET_CPU_VARIANT_RUNTIME := generic
 
 TARGET_USES_64_BIT_BINDER := true
 
+# APEX
+OVERRIDE_TARGET_FLATTEN_APEX := true
+
 # Platform
 TARGET_BOARD_PLATFORM := sp9863a
 
@@ -29,8 +32,8 @@ TARGET_NO_BOOTLOADER := true
 TARGET_USES_UEFI := true
 
 # Kernel
-TARGET_KERNEL_ARCH := arm
-TARGET_KERNEL_HEADER_ARCH := arm
+#TARGET_KERNEL_ARCH := arm
+#TARGET_KERNEL_HEADER_ARCH := arm
 BOARD_BOOTIMG_HEADER_VERSION := 2
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE := console=ttyS1,115200n8
@@ -78,7 +81,6 @@ TARGET_USES_MKE2FS := true
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
-BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 0
 BOARD_AVB_RECOVERY_KEY_PATH := external/avb/test/data/testkey_rsa4096.pem
 BOARD_AVB_RECOVERY_ALGORITHM := SHA256_RSA4096
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX := 0
@@ -112,7 +114,7 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_USE_TOOLBOX := true
 TW_INCLUDE_NTFS_3G := true
 RECOVERY_SDCARD_ON_DATA := true
-TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone3/temp
+#TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone3/temp
 TW_BRIGHTNESS_PATH := "/sys/devices/platform/sprd_backlight/backlight/sprd_backlight/brightness"
 TW_MAX_BRIGHTNESS := 255
 #TW_MTP_DEVICE := /dev/mtp_usb
