@@ -119,7 +119,7 @@ on init
     write /config/usb_gadget/g1/idVendor 0x1782
     write /config/usb_gadget/g1/idProduct 0x4d00
     mkdir /config/usb_gadget/g1/strings/0x409 0770 shell shell
-    write /config/usb_gadget/g1/strings/0x409/serialnumber $ro.serialno
+    write /config/usb_gadget/g1/strings/0x409/serialnumber ${name}
     write /config/usb_gadget/g1/strings/0x409/manufacturer Unisoc
     write /config/usb_gadget/g1/strings/0x409/product "Unisoc Phone"
     mkdir /config/usb_gadget/g1/configs/b.1 0770 shell shell
@@ -188,7 +188,7 @@ on boot
     chmod 660 /sys/class/power_supply/battery/charger.0/jeita_control
 
 on fs
-    mkdir /data/misc/bluedroid 0770 bluetooth net_bt_stack
+#    mkdir /data/misc/bluedroid 0770 bluetooth net_bt_stack
     mkdir /data/misc/bluetooth 0770 system system
 
 on post-fs-data
@@ -198,7 +198,7 @@ on post-fs-data
     # We restorecon /data in case the userdata partition has been reset.
     restorecon /data
     mkdir /data/misc 01771 system misc
-    mkdir /data/misc/bluedroid 0770 bluetooth net_bt_stack
+#    mkdir /data/misc/bluedroid 0770 bluetooth net_bt_stack
     mkdir /data/misc/bluetooth 0770 system system
     copy /system/etc/bluetooth/bt_stack.conf /data/misc/bluedroid/bt_stack.conf
     chown bluetooth system /data/misc/bluedroid/bt_stack.conf
