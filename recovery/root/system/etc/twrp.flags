@@ -7,7 +7,7 @@ product /product ext4 ro,barrier=1 wait,logical,first_stage_mount
 /vendor_image     emmc     /dev/block/mapper/vendor       flags=display="vendor_image";flashimg=1;backup=1
 /product_image     emmc     /dev/block/mapper/product       flags=display="product_image";flashimg=1;backup=1
 
-/data                           f2fs    /dev/block/platform/soc/soc:ap-ahb/20600000.sdio/by-name/userdata        flags=fileencryption=aes-256-cts
+/data                           f2fs    /dev/block/platform/soc/soc:ap-ahb/20600000.sdio/by-name/userdata        flags=encryptable=footer
 /cache                          ext4    /dev/block/platform/soc/soc:ap-ahb/20600000.sdio/by-name/cache      
 /spl                            emmc    /dev/block/mmcblk0boot0                                                                      
 /spl_bk                         emmc    /dev/block/mmcblk0boot1                                                                   
