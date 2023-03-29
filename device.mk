@@ -61,12 +61,6 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
     android.hardware.fastboot@1.0-impl-mock.recovery
 
-PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-    bootctrl.sp9863a \
-    libgptutils \
-    libz \
-    libcutils
-
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
 
