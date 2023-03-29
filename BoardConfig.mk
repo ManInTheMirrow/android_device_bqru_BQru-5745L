@@ -103,6 +103,7 @@ BOARD_GROUP_UNISOC_SIZE := 3984588800
 # Workaround for copying error vendor files to recovery ramdisk
 TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_VENDOR := vendor
+TARGET_COPY_OUT_SYSTEM_EXT = system_ext
 
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
