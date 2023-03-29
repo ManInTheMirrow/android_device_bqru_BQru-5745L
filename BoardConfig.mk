@@ -124,8 +124,8 @@ RECOVERY_SDCARD_ON_DATA := true
 TW_BRIGHTNESS_PATH := "/sys/devices/platform/sprd_backlight/backlight/sprd_backlight/brightness"
 TW_MAX_BRIGHTNESS := 255
 TW_DEFAULT_BRIGHTNESS := 90
-#TW_MTP_DEVICE := /dev/mtp_usb
 TW_HAS_MTP := true
+TW_MTP_DEVICE := /dev/mtp_usb
 TW_EXCLUDE_TWRPAPP := true
 TW_EXCLUDE_APEX := true
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
@@ -136,4 +136,3 @@ TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
 # For debugging
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
-
