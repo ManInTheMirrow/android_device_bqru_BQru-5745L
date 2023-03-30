@@ -56,8 +56,8 @@ PRODUCT_PACKAGES += \
     bootctrl.sp9863a.recovery
 
 # Fix touch
-PRODUCT_PACKAGES += \
-    vendor.unisoc.hardware.tswake-service
+#PRODUCT_PACKAGES += \
+#    vendor.unisoc.hardware.tswake-service
 
 # Fastbootd
 PRODUCT_PACKAGES += \
