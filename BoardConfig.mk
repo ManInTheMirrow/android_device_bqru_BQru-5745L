@@ -17,15 +17,15 @@ TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := generic
 TARGET_CPU_ABI_LIST := $(TARGET_CPU_ABI),$(TARGET_CPU_ABI2)
-ARCH_ARM_HAVE_NEON := true
-TARGET_CPU_SMP := false
+
+TARGET_CPU_SMP := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
 
-TARGET_BOARD_SUFFIX := _32
+#TARGET_BOARD_SUFFIX := _32
 TARGET_USES_64_BIT_BINDER := true
-TARGET_SUPPORTS_32_BIT_APPS := true
-TARGET_SUPPORTS_64_BIT_APPS := false
-TARGET_IS_32_BIT := true
+#TARGET_SUPPORTS_32_BIT_APPS := true
+#TARGET_SUPPORTS_64_BIT_APPS := false
+#TARGET_IS_32_BIT := true
 
 # A/B
 AB_OTA_UPDATER := true
@@ -110,8 +110,12 @@ PLATFORM_SECURITY_PATCH := 2099-12-31
 VENDOR_SECURITY_PATCH := 2099-12-31
 PLATFORM_VERSION := 16.1.0
 
-# System props
+# Properties
 TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+
+# Use mke2fs to create ext4 images
+TARGET_USES_MKE2FS := true
 
 # TWRP Configuration
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
@@ -122,19 +126,23 @@ TW_USE_TOOLBOX := true
 TW_INCLUDE_NTFS_3G := true
 RECOVERY_SDCARD_ON_DATA := true
 TW_BRIGHTNESS_PATH := "/sys/devices/platform/sprd_backlight/backlight/sprd_backlight/brightness"
+TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/android0/f_mass_storage/lun/file"
 TW_MAX_BRIGHTNESS := 255
 TW_DEFAULT_BRIGHTNESS := 90
-TW_HAS_MTP := true
 TW_MTP_DEVICE := /dev/mtp_usb
 TW_EXCLUDE_TWRPAPP := true
 TW_EXCLUDE_APEX := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
-TW_DEVICE_VERSION := BQ-5745L
+TW_DEVICE_VERSION := BQ-5745L by GameProjects
 
-#TW_INCLUDE_RESETPROP := true
+TW_INCLUDE_FASTBOOTD := true
+TW_INCLUDE_RESETPROP := true
 #TW_INCLUDE_REPACKTOOLS := true
 
 # For debugging
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
+
+# Kernel module loading
+TW_LOAD_VENDOR_MODULES := "tlsc6x_ts.ko oreo_ili9882n.ko focaltech-FT5x46.ko incrementalfs.ko kheaders.ko trace_irqsoff_bytedancy.ko trace_noschedule_bytedancy.ko trace_runqlat_bytedancy.ko"
