@@ -52,12 +52,8 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-service
 
 PRODUCT_PACKAGES += \
-    bootctrl.sp9863a \
-    bootctrl.sp9863a.recovery
-
-# Fix touch
-#PRODUCT_PACKAGES += \
-#    vendor.unisoc.hardware.tswake-service
+    bootctrl.unisoc \
+    bootctrl.unisoc.recovery
 
 # Fastbootd
 PRODUCT_PACKAGES += \
