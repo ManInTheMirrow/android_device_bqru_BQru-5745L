@@ -1,16 +1,18 @@
 # Dynamic partition
-/system_root        	ext4    /dev/block/mapper/system            		flags=backup=1;wipeingui;slotselect;logical;display="System_root"
-/vendor             	ext4    /dev/block/mapper/vendor			flags=backup=1;wipeingui;slotselect;logical;display="Vendor"
-/product            	ext4    /dev/block/mapper/product           		flags=backup=1;wipeingui;slotselect;logical;display="Product"
-/system_ext		ext4	/dev/block/mapper/system_ext			flags=backup=1;wipeingui;slotselect;logical;display="System_ext"
+/system_root        	ext4    /dev/block/mapper/system_a            		flags=backup=1;wipeingui;display="System"
+/vendor             	ext4    /dev/block/mapper/vendor_a			flags=backup=1;wipeingui;display="Vendor"
+/product            	ext4    /dev/block/mapper/product_a           		flags=backup=1;wipeingui;display="Product"
+/system_ext		ext4	/dev/block/mapper/system_ext_a			flags=backup=1;wipeingui;display="System_ext"
 
 # Images
-/system_image	    	emmc  	/dev/block/mapper/system			flags=backup=1;flashimg=1;slotselect;logical;display="System Image"
-/vendor_image	    	emmc  	/dev/block/mapper/vendor			flags=backup=1;flashimg=1;slotselect;logical;display="Vendor Image"
-/product_image	    	emmc	/dev/block/mapper/product			flags=backup=1;flashimg=1;slotselect;logical;display="Product Image"
-/system_ext_image	emmc	/dev/block/mapper/system_ext			flags=backup=1;flashimg=1;slotselect;logical;display="System_ext Image"
+/system_image	    	emmc  	/dev/block/mapper/system_a			flags=backup=1;flashimg=1;display="System Image"
+/vendor_image	    	emmc  	/dev/block/mapper/vendor_a			flags=backup=1;flashimg=1;display="Vendor Image"
+/product_image	    	emmc	/dev/block/mapper/product_a			flags=backup=1;flashimg=1;display="Product Image"
+/system_ext_image	emmc	/dev/block/mapper/system_ext_a			flags=backup=1;flashimg=1;display="System_ext Image"
 
-/data                           f2fs     /dev/block/by-name/userdata        		flags=encryptable=footer
+/super          emmc      /dev/block/by-name/super                   flags=display="Super Image";backup=1;flashimg=1
+
+/data                           f2fs     /dev/block/by-name/userdata
 /spl                            emmc     /dev/block/mmcblk0boot0                                                                      
 /spl_bk                         emmc     /dev/block/mmcblk0boot1                                                                   
 /uboot                          emmc     /dev/block/by-name/uboot            		flags=slotselect                  
@@ -37,7 +39,7 @@
 /gnssbdmodem      		emmc     /dev/block/by-name/gpsbd			flags=slotselect
 /pmsys                          emmc     /dev/block/by-name/pm_sys                  	flags=slotselect
 /misc                           emmc     /dev/block/by-name/misc        		flags=display="Misc"slotselect
-/boot                           emmc     /dev/block/by-name/boot                  	flags=backup=1;flashimg=1;slotselect
+/boot                           emmc     /dev/block/by-name/boot_a                  	flags=backup=1;flashimg=1;slotselect
 /persist                        emmc     /dev/block/by-name/persist              	flags=display="Persist"
 /persist_image      		emmc     /dev/block/by-name/persist      		flags=display="Persist Image";backup=1;flashimg=1;
 /logo                           emmc     /dev/block/by-name/logo                  
