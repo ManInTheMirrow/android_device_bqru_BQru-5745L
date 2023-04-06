@@ -132,8 +132,8 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_USE_TOOLBOX := true
 TW_INCLUDE_NTFS_3G := true
 RECOVERY_SDCARD_ON_DATA := true
-TW_BRIGHTNESS_PATH := "/sys/devices/platform/sprd_backlight/backlight/sprd_backlight/brightness"
-TARGET_USE_CUSTOM_LUN_FILE_PATH := "/config/usb_gadget/g1/functions/mass_storage.gs6/lun.%d/file"
+TW_BRIGHTNESS_PATH := /sys/devices/platform/sprd_backlight/backlight/sprd_backlight/brightness
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.gs6/lun.%d/file
 TW_MAX_BRIGHTNESS := 255
 TW_DEFAULT_BRIGHTNESS := 90
 TW_MTP_DEVICE := /dev/mtp_usb
@@ -142,11 +142,11 @@ TW_EXCLUDE_APEX := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_NO_SCREEN_BLANK := true
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
-TW_DEVICE_VERSION := BQ-5745L by GameProjects
+#TW_DEVICE_VERSION := BQ-5745L by GameProjects
 
 TW_INCLUDE_FASTBOOTD := true
 #TW_INCLUDE_RESETPROP := true
-TW_INCLUDE_REPACKTOOLS := true
+#TW_INCLUDE_REPACKTOOLS := true
 
 # For debugging
 TWRP_INCLUDE_LOGCAT := true
@@ -155,3 +155,21 @@ TARGET_USES_LOGD := true
 # Kernel module loading
 #TW_LOAD_VENDOR_MODULES := "tlsc6x_ts.ko"
 TW_LOAD_VENDOR_MODULES := "tlsc6x_ts.ko focaltech-FT5x46.ko incrementalfs.ko kheaders.ko trace_irqsoff_bytedancy.ko trace_noschedule_bytedancy.ko trace_runqlat_bytedancy.ko"
+
+# SHRP
+SHRP_DEVICE_CODE := BQru_5745L
+SHRP_PATH := $(DEVICE_PATH)
+SHRP_MAINTAINER := GameProjects
+SHRP_REC_TYPE := Treble
+SHRP_DEVICE_TYPE := A/B
+SHRP_AB := true
+SHRP_INTERNAL := /sdcard
+SHRP_EXTERNAL := /external_sd
+SHRP_OTG := /usb_otg
+SHRP_FLASH := 1
+SHRP_DARK := true
+SHRP_SKIP_DEFAULT_ADDON_1 := true
+SHRP_SKIP_DEFAULT_ADDON_2 := true
+INC_IN_REC_ADDON_3 := true
+INC_IN_REC_ADDON_4 := true
+INC_IN_REC_MAGISK := true
