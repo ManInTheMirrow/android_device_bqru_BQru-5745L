@@ -3,8 +3,5 @@ kheaders.ko:
 incrementalfs.ko:
 trace_noschedule_bytedancy.ko:
 trace_irqsoff_bytedancy.ko:
-oreo_ili9882n.ko:
-chipone_fp.ko:
 focaltech_touch.ko:
-NVT_Touch.ko:
 tlsc6x_ts.ko:

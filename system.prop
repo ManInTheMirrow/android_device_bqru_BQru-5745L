@@ -1,2 +1,4 @@
+ro.crypto.dm_default_key.options_format.version=2
+ro.crypto.volume.options=aes-256-xts:aes-256-cts:v2
 ro.sf.lcd_density=320
 ro.hardware=sp9863a
