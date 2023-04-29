@@ -1,5 +1,7 @@
 # TWRP device tree for BQru BQ-5745L (BQru-5745L)
 
+Status: is not loading.
+
 ## Device specification
 
 Basic   | Spec Sheet
