@@ -38,7 +38,7 @@
 /gnssmodem        		emmc     /dev/block/by-name/gpsgl			flags=slotselect
 /gnssbdmodem      		emmc     /dev/block/by-name/gpsbd			flags=slotselect
 /pmsys                          emmc     /dev/block/by-name/pm_sys                  	flags=slotselect
-/misc                           emmc     /dev/block/by-name/misc        		flags=display="Misc"slotselect
+/misc                           emmc     /dev/block/by-name/misc        		flags=display="Misc";slotselect
 /boot                           emmc     /dev/block/by-name/boot_a                  	flags=backup=1;flashimg=1;slotselect
 /persist                        emmc     /dev/block/by-name/persist              	flags=display="Persist"
 /persist_image      		emmc     /dev/block/by-name/persist      		flags=display="Persist Image";backup=1;flashimg=1;
