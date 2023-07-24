@@ -41,14 +41,14 @@
 /misc                           emmc     /dev/block/by-name/misc        		flags=display="Misc";slotselect
 /boot                           emmc     /dev/block/by-name/boot_a                  	flags=backup=1;flashimg=1;slotselect
 /persist                        emmc     /dev/block/by-name/persist              	flags=display="Persist"
-/persist_image      		emmc     /dev/block/by-name/persist      		flags=display="Persist Image";backup=1;flashimg=1;
+/persist_image      		emmc     /dev/block/by-name/persist      		flags=display="Persist Image";backup=1;flashimg=1
 /logo                           emmc     /dev/block/by-name/logo                  
 /fbootlogo                      emmc     /dev/block/by-name/fbootlogo            
 /metadata              		ext4     /dev/block/by-name/metadata              	flags=display="Metadata";backup=1
 /socko                 		ext4     /dev/block/by-name/socko                 	flags=display="Socko";backup=1;slotselect
 /odmko                 		ext4     /dev/block/by-name/odmko                 	flags=display="Odmko";backup=1;slotselect
 /mnt/vendor            		ext4     /dev/block/by-name/prodnv                	flags=display="ProdNV";backup=1
-/mnt/vendor_image       	emmc     /dev/block/by-name/prodnv       		flags=display="ProdNV Image";backup=1;flashimg=1;
+/mnt/vendor_image       	emmc     /dev/block/by-name/prodnv       		flags=display="ProdNV Image";backup=1;flashimg=1
 /UDC_config            		emmc     /dev/block/by-name/UDC_config
 
 # Removable storage
