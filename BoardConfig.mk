@@ -98,7 +98,7 @@ BOARD_SUPER_PARTITION_SIZE := 3984588800
 BOARD_SUPER_PARTITION_GROUPS := group_unisoc
 
 BOARD_GROUP_UNISOC_PARTITION_LIST := system system_ext vendor product
-BOARD_GROUP_UNISOC_SIZE := 3984588800
+BOARD_GROUP_UNISOC_SIZE := 3980394496
 
 # Workaround for copying error vendor files to recovery ramdisk
 TARGET_COPY_OUT_PRODUCT := product
