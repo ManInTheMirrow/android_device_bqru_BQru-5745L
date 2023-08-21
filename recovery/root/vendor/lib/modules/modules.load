@@ -1,7 +1,0 @@
-trace_runqlat_bytedancy.ko:
-kheaders.ko:
-incrementalfs.ko:
-trace_noschedule_bytedancy.ko:
-trace_irqsoff_bytedancy.ko:
-focaltech_touch.ko:
-tlsc6x_ts.ko:
