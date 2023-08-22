@@ -35,6 +35,9 @@ TARGET_USES_UEFI := true
 TARGET_BOARD := s9863a1h10_go_32b
 TARGET_BOARD_PLATFORM := sp9863a
 
+# SPRD hardware
+BOARD_USES_SPRD_HARDWARE := true
+
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyS1,115200n8
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
