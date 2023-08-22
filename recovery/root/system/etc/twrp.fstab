@@ -9,7 +9,7 @@
 /system_ext_image	    emmc     /dev/block/mapper/system_ext_a             flags=backup=1;flashimg=1;display="System_Ext Image"
 /vendor_image	    	emmc     /dev/block/mapper/vendor_a			        flags=backup=1;flashimg=1;display="Vendor Image"
 /product_image	    	emmc     /dev/block/mapper/product_a			    flags=backup=1;flashimg=1;display="Product Image"
-/super                  emmc     /dev/block/by-name/super                   flags=backup=1;flashimg=1;display="Super Image";
+/super                  emmc     /dev/block/by-name/super                   flags=backup=1;flashimg=1;display="Super Image"
 
 # Other
 /spl                    emmc     /dev/block/mmcblk0boot0
@@ -25,7 +25,7 @@
 /vbmeta_product         emmc     /dev/block/by-name/vbmeta_product		    flags=backup=1;flashimg=1;display="VBMeta Product";slotselect
 /vbmeta_system_ext      emmc     /dev/block/by-name/vbmeta_system_ext     	flags=backup=1;flashimg=1;display="VBMeta System_Ext";slotselect
 /dtbo                   emmc     /dev/block/by-name/dtbo                    flags=backup=1;flashimg=1;display="DTBO";slotselect
-/ltedsp                 emmc     /dev/block/by-name/l_ldsp                  flags=backup=1;subpartitionof=/ltemodem;slotselect;
+/ltedsp                 emmc     /dev/block/by-name/l_ldsp                  flags=backup=1;subpartitionof=/ltemodem;slotselect
 /ltegdsp                emmc     /dev/block/by-name/l_gdsp			        flags=backup=1;subpartitionof=/ltemodem;slotselect
 /ltemodem               emmc     /dev/block/by-name/l_modem                 flags=backup=1;display="Modem (IMEI)";slotselect
 /ltedeltanv				emmc     /dev/block/by-name/l_deltanv               flags=backup=1;subpartitionof=/ltemodem;slotselect
@@ -48,7 +48,7 @@
 /socko                 	ext4     /dev/block/by-name/socko                 	flags=backup=1;display="Socko";slotselect
 /socko_image            emmc     /dev/block/by-name/socko_a                 flags=backup=1;flashimg=1;display="Socko Image"
 /odmko                 	ext4     /dev/block/by-name/odmko                 	flags=backup=1;display="Odmko";slotselect
-/odmko_image            emmc     /dev/block/by-name/odmko_a                 flags=backup=1;flashimg=1;display="Odmko Image";
+/odmko_image            emmc     /dev/block/by-name/odmko_a                 flags=backup=1;flashimg=1;display="Odmko Image"
 /prodnv            	    ext4     /dev/block/by-name/prodnv                	flags=backup=1;display="ProdNV"
 /prodnv_image           emmc     /dev/block/by-name/prodnv       		    flags=backup=1;flashimg=1;display="ProdNV Image"
 /sysdumpdb              emmc     /dev/block/by-name/sysdumpdb               flags=backup=1;display="Sysdumpdb"
