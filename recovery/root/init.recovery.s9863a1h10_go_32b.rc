@@ -2,53 +2,10 @@
 import /init.recovery.common.rc
 
 on init
-    start runatboot
+    insmod vendor/lib/modules/tlsc6x_ts.ko
+    start set_permissive
 
-on boot
-    start health-hal-2-1
-
-on post-fs
-    start boot-hal-1-1
-
-on property:ro.crypto.state=unencrypted
-    start prepdecrypt
-
-service runatboot /system/bin/runatboot.sh
-    oneshot
-    user root
-    group root
-    disabled
-    seclabel u:r:recovery:s0
-
-on property:ro.crypto.state=unsupported
-    stop sbinqseecomd
-    stop keymaster-4-0
-    stop gatekeeper-1-0
-    stop servicemanager
-    stop hwservicemanager
-
-on property:ro.crypto.state=unencrypted
-    stop sbinqseecomd
-    stop keymaster-4-0
-    stop gatekeeper-1-0
-    stop servicemanager
-    stop hwservicemanager
-
-on property:twrp.decrypt.done=true
-    stop sbinqseecomd
-    stop keymaster-4-0
-    stop gatekeeper-1-0
-    stop servicemanager
-    stop hwservicemanager
-
-on property:ro.crypto.fs_crypto_blkdev=*
-    stop sbinqseecomd
-    stop keymaster-4-0
-    stop gatekeeper-1-0
-    stop servicemanager
-    stop hwservicemanager
-
-service prepdecrypt /system/bin/prepdecrypt.sh
+service set_permissive /system/bin/set_permissive.sh
     user root
     group root
     disabled
